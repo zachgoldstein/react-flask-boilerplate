@@ -16,7 +16,7 @@ Extras:
     * Performance benchmarks
 * Flask-security and basic user management flows
     * Sign-up
-    * Sign-in, 
+    * Sign-in/out
     * Reset Password
 * Flask-admin for system administration
 * Flask debug toolbar in dev mode
@@ -35,5 +35,9 @@ Flask is like lego, so I'm a big fan. I prefer to bolt various small pieces of f
 Why Reactjs?
 Reactjs seems to be pretty dominant in front-end JS land, with a good community and strong productivity gains over the alternatives (angular, ember, etc). I've found it to be much easier to compartmentalise components with it.
 
+Big thanks to these useful resources:
+* https://github.com/nickjj/flask-webpack
+* http://exploreflask.readthedocs.org/en/latest/
+* 
 
 
