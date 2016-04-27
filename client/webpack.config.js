@@ -1,9 +1,15 @@
 var path = require('path');
+var webpack = require("webpack");
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
 
 var rootAssetPath = './assets';
+
+apiEndpoint = 'http://localhost:5001';
+if (process.env.API_ENDPOINT != null) {
+    apiEndpoint = process.env.API_ENDPOINT
+}
 
 module.exports = {
     entry: {
@@ -16,7 +22,7 @@ module.exports = {
     },
     output: {
         path: '../server/static/assets',
-        publicPath: 'http://localhost:5001/static/assets/',
+        publicPath: apiEndpoint+'/static/assets/',
         filename: '[name].[chunkhash].js',
         chunkFilename: '[id].[chunkhash].js'
     },
@@ -66,6 +72,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __API_ENDPOINT__: JSON.stringify(apiEndpoint)
+        }),
         new ExtractTextPlugin('[name].[chunkhash].css'),
         new ManifestRevisionPlugin(path.join('../server/static/assets', 'manifest.json'), {
             rootAssetPath: rootAssetPath,

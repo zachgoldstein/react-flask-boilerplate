@@ -1,3 +1,6 @@
 server/venv
 *.pyc
 server/instance
+server/static/assets
+npm-debug.log
+.pycharmrc

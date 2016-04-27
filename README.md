@@ -14,10 +14,11 @@ Extras:
     * Setup environment
     * Deployments to AWS
     * Performance benchmarks
+* Production setup with nginx as forward proxy
+* HTTPS via let's encrypt SSL certs 
 * Flask-security and basic user management flows
     * Sign-up
     * Sign-in/out
-    * Reset Password
 * Flask-admin for system administration
 * Flask debug toolbar in dev mode
 * Python unit tests via pytest and Factory-Boy
@@ -38,6 +39,7 @@ Reactjs seems to be pretty dominant in front-end JS land, with a good community 
 Big thanks to these useful resources:
 * https://github.com/nickjj/flask-webpack
 * http://exploreflask.readthedocs.org/en/latest/
-* 
-
+* https://www.rmedgar.com/blog/using-lets-encrypt-certificates
+* https://letsencrypt.org/getting-started/
+* http://www.redotheweb.com/2015/11/09/api-security.html
 

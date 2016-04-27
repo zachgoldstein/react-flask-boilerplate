@@ -7,3 +7,8 @@ front_end = Blueprint('front_end', __name__)
 def site():
   return render_template('index.jinja2')
 
+@front_end.route('/ping')
+def teapot():
+  response = jsonify(message="Short and stout")
+  response.status_code = 418
+  return response

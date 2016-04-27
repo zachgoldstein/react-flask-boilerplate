@@ -30,6 +30,7 @@
     "start": "node_modules/.bin/webpack-dev-server --progress --colors --port 2992 --content-base build/public",
     "build": "node_modules/.bin/webpack --progress --profile --colors",
     "watch": "node_modules/.bin/webpack --watch",
+    "clean": "rm -rf ../server/static/assets/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

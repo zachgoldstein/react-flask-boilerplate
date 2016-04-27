@@ -3,27 +3,16 @@
  * App entry point
  */
 
-// Polyfill
 import 'babel-polyfill';
 
-// Libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory } from 'react-router';
-
-// Routes
-import Routes from './common/components/Routes.jsx';
-
-// Base styling
-import './common/base.scss';
-
+import App from './common/components/App.jsx';
 
 // ID of the DOM element to mount app on
 const DOM_APP_EL_ID = 'app';
 
+console.log("Using endpoint,",__API_ENDPOINT__);
+
 // Render the router
-ReactDOM.render((
-    <Router history={browserHistory}>
-    {Routes}
-    </Router>
-), document.getElementById(DOM_APP_EL_ID));
+ReactDOM.render((<App/>), document.getElementById(DOM_APP_EL_ID));
